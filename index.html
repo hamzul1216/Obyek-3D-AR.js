@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <!-- Correcting zooming issue -->
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <!-- Library untuk VR membangun 3D -->
+    <script src="./js/aframe/aframe.min.js"></script>
+    <!-- Library untuk AR yang melakukan pengenalan marker dan menyematkan kamera-->
+    <script src="./js/arjs/aframe-ar.js"></script>
+    <title>Web Augmented Reality with AR.js</title>
+  </head>
+
+  <body style="margin: 0px; overflow: hidden">
+    <a-scene embedded arjs>
+      <a-marker>
+        <a-box 
+          position="-1 0.5 -3" 
+          rotation="0 45 0" 
+          color="#2E4F4F"
+        ></a-box>
+        <a-sphere 
+          position="0 1.25 -5" 
+          radius="1.25" 
+          color="#EF2D5E"
+        ></a-sphere>
+        <a-cylinder
+          position="1 0.75 -3"
+          radius="0.5"
+          height="1.5"
+          color="#AD7BE9"
+        ></a-cylinder>
+        <a-plane
+          position="0 0 -4"
+          rotation="-90 0 0"
+          width="4"
+          height="4"
+          color="#7BC8A4"
+        ></a-plane>
+        <a-cone 
+        radius-bottom="1" 
+        radius-top="0" 
+        height="2" 
+        position="3 1 -4" 
+        color="#4444CC" 
+        ></a-cone>
+      </a-marker>
+
+      <a-entity camera> </a-entity>
+    </a-scene>
+  </body>
+</html>
